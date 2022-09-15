@@ -40,12 +40,14 @@ if (!empty($_POST['action'])) {
     }
 }
     //$_SESSION['playerTotal'] = $_SESSION['playerCards'];
-    echo($_SESSION);
 
 pre_r($_SESSION['playerCards']);
 pre_r($_SESSION['dealerCards']);
 
 echo count($_SESSION['deck']);
+
+
+    if  $playerCards > 21 $dealerCards -> echo "winner";
 
 
 ?>
@@ -136,15 +138,15 @@ echo count($_SESSION['deck']);
                 <div class="card flex-right"> 
                     <h4>your hand</h4> 
                 <?php  
-                    echo ($_SESSION['playerCards'][] = array_pop($_SESSION['deck']));
-                    echo  $_SESSION['playerCards'];
-                    ?><p>  </p><?php
-                    echo $_SESSION['playerCards'];
+                  //  echo ($_SESSION['playerCards'][] = array_pop($_SESSION['deck']));
+                  //  echo  $_SESSION['playerCards'];
+                  //  ?><p>  </p><?php
+                  //  echo $_SESSION['playerCards'];
                     ?>
                     <p><?php ?></p><?php
-                    if (isset($_POST["hit"])){
-                            echo $soort[array_rand($soort)] . $card[array_rand($card)];
-                        }?>
+                   // if (isset($_POST["hit"])){
+                    //        echo $soort[array_rand($soort)] . $card[array_rand($card)];
+                     //   }?>
                         <p><?php ?></p>
                 </div> 
                 <div class="card2 flex-left">
