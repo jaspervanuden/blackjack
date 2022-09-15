@@ -153,7 +153,7 @@ echo count($_SESSION['deck']);
                    // echo $soort[array_rand($soort)] . $card[array_rand($card)];?>
                 </div>  
                 <div>
-
+<p>sdasd</p>
                 </div>
             </div>
         </div>
