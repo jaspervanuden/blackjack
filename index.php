@@ -39,6 +39,8 @@ if (!empty($_POST['action'])) {
         $_SESSION['dealerCards'][] = array_pop($_SESSION['deck']);
     }
 }
+    //$_SESSION['playerTotal'] = $_SESSION['playerCards'];
+    echo($_SESSION);
 
 pre_r($_SESSION['playerCards']);
 pre_r($_SESSION['dealerCards']);
@@ -134,7 +136,7 @@ echo count($_SESSION['deck']);
                 <div class="card flex-right"> 
                     <h4>your hand</h4> 
                 <?php  
-                
+                    echo ($_SESSION['playerCards'][] = array_pop($_SESSION['deck']));
                     echo  $_SESSION['playerCards'];
                     ?><p>  </p><?php
                     echo $_SESSION['playerCards'];
