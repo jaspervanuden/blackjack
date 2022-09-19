@@ -35,20 +35,20 @@ if (!empty($_POST['action'])) {
         header('Location: /');
         exit;
     }
+    
+
     else if ($_POST['action'] == 'stand') {
         $_SESSION['dealerCards'][] = array_pop($_SESSION['deck']);
     }
 }
+
+
     //$_SESSION['playerTotal'] = $_SESSION['playerCards'];
 
 pre_r($_SESSION['playerCards']);
 pre_r($_SESSION['dealerCards']);
 
-echo count($_SESSION['deck']);
-
-
-    if  $playerCards > 21 $dealerCards -> echo "winner";
-
+  //  if  $playerCards > 21 $dealerCards -> echo "winner";
 
 ?>
 <!doctype html>
@@ -138,6 +138,7 @@ echo count($_SESSION['deck']);
                 <div class="card flex-right"> 
                     <h4>your hand</h4> 
                 <?php  
+                    echo '<pre>'; print_r($_SESSION['playerCards']); echo '</pre>';
                   //  echo ($_SESSION['playerCards'][] = array_pop($_SESSION['deck']));
                   //  echo  $_SESSION['playerCards'];
                   //  ?><p>  </p><?php
@@ -149,15 +150,21 @@ echo count($_SESSION['deck']);
                      //   }?>
                         <p><?php ?></p>
                 </div> 
+                <?php print_r($card)?>
                 <div class="card2 flex-left">
                     <h4>dealer hand</h4>
                     <?php
+                     echo '<pre>'; print_r(['dealerCards']); echo '</pre>';
+                     echo '<pre>'; print_r(['dealerCard']); echo '</pre>';
                    // echo $soort[array_rand($soort)] . $card[array_rand($card)];
                     ?><p>  </p><?php
                    // echo $soort[array_rand($soort)] . $card[array_rand($card)];?>
                 </div>  
                 <div>
-<p>sdasd</p>
+                    <?php echo array_pop($_SESSION['deck'])    ?>
+                    <p>kaarten over <?php echo count($_SESSION['deck']);?></p>
+                    <p>kaarten nog over en nog te besteden </p>
+
                 </div>
             </div>
         </div>
